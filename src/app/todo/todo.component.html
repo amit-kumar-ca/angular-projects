@@ -1,0 +1,21 @@
+<h1>My Todos</h1>
+
+<div class="container" *ngIf='errorMessage'>{{errorMessage}}</div>
+
+<div class="container" >
+    <table class="container" border='0.5px'>
+        <thead>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Target Date</th>
+            <th>Completed</th>
+        </thead>
+        <tbody *ngFor='let todo of todos'>
+            <td>{{todo.id}}</td>
+            <td>{{todo.description}}</td>
+            <td>{{todo.targetDate | date}}</td>
+            <td>{{todo.isDone}}</td>
+        </tbody>
+
+    </table>
+</div>
